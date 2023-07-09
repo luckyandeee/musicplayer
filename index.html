@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Music Player</title>
+</head>
+
+<body>
+    <header class="bg-warning">
+        <!-- ICON and TEXT -->
+        <div class="container">
+            <nav class="navbar navbar-light justify-content-center ">
+                <a class="navbar-brand fa-bounce" href="#">
+                    <span class="fa-stack fa-2x ">
+                        <i class="fa-sharp fa-solid fa-clapperboard fa-stack-2x"></i>
+                        <i class="fa-solid  fa-play fa-stack-1x fa-inverse fa-xs mt-2"></i>
+                    </span><strong>Music Player</strong>
+                </a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- music list and player -->
+    <section id="bodyData" class="d-flex align-items-center justify-content-center">
+        <div class="MusicBg">
+                
+        </div>
+        <div class="container ">
+            <div class="row d-flex align-items-center justify-content-center ">
+                <div class="col-md-6 col-12">
+                    <div class="row">
+                        <span type="button" class="text-center" id="shuffle-btn"style="display: block;"><i class="fa-solid fa-tornado text-dark"> Play Random</i></span>
+                        <input class="searchTerm" type="search" id="searchbar" placeholder="Search" onkeyup="search_music()">
+                        <ul class="list-group list-group-flush" id="musicList">
+
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-12">
+                    <div class="MusicBg">
+                        
+                    </div>
+                    <div class="row">
+                        <div>
+                            <div class=" d-flex justify-content-center">
+                                
+                                <div class="card h-100" style="width: 18rem; z-index: 10;">
+                                    <img class="card-img-top" src="images/blank.jpg">
+                                    <div class="card-body">
+                                      <h5 id="masterSongName" class="card-title text-center">&nbsp;&nbsp;&nbsp;</h5>
+                                      <h6 id="masterArtishName" class="text-end">&nbsp;&nbsp;&nbsp;</h6>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div >
+                                            <div id="controls" class="d-flex align-items-center justify-content-center">
+                                                <span type="button" id="previous-btn"><i class="fa-solid fa-chevron-left fa-2x fa-fw" aria-hidden="true"></i></span>
+                                                <span type="button" id="play-btn-m"><i class="fa fa-play fa-fw fa-3x " aria-hidden="true"></i></span>
+                                                <span type="button" id="next-btn"><i class="fa-solid fa-chevron-right fa-2x fa-fw" aria-hidden="true"></i></span>
+                                               </div>
+                                               <div id="timeline" class="row">
+                                                <div class="col-6 text-start"><span id="current-time">--:--</span></div>
+                                                <div class="col-6 text-end"><span   id="total-time">--:--</span></div>
+                                               </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <span>Developed by: Vemuri Sai Srinivas </span>
+    </footer>
+    <script src="script/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
